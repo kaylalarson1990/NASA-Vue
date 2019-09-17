@@ -53,5 +53,8 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "resolutions": {
+    "@vue/cli-plugin-babel/**/@babel/core": "^7.0.0 <7.4.0"
+  }
 }

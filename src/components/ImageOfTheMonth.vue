@@ -1,9 +1,10 @@
 <template>
   <div>
+    <h3 class="header">Here you can find images based on a specific date.</h3>
     <div class="flex">
       <option disabled value>Please select a date:</option>
       <form class="choose-date">
-        <select @change="selectDate($event)">
+        <select @change="dateSelection($event)">
           <option v-for="(date, index) in dates" v-bind:value="date" :key="index">{{ date }}</option>
         </select>
       </form>
@@ -11,7 +12,11 @@
     <div class="day" v-if="this.monthlyImage.date">
       <h2>{{this.monthlyImage.title}}</h2>
       <h3>{{this.monthlyImage.date}}</h3>
-      <img class="nasa-pic" v-bind:src="`${this.monthlyImage.hdurl}`" alt="nasa-image-of-the-day" />
+      <img
+        class="nasa-image-of-the-month"
+        v-bind:src="`${this.monthlyImage.hdurl}`"
+        alt="nasa-image-of-the-day"
+      />
       <p>{{this.monthlyImage.explanation}}</p>
     </div>
     <div v-else></div>
@@ -27,8 +32,11 @@ export default {
   },
   data() {
     let date = new Date().toISOString().slice(0, 10);
+    console.log('date', date)
     let month = date.slice(0, 8);
+    console.log('month', month)
     let day = date.slice(8, 10);
+    console.log('day', day)
     let text = "";
     let index;
     for (index = 1; index < day; index++) {
@@ -41,7 +49,7 @@ export default {
     };
   },
   methods: {
-    async selectDate($event) {
+    async dateSelection($event) {
       let choosenDate = $event.target.value;
       let picture = await getImageOfTheMonth(choosenDate);
       this.monthlyImage = picture;
@@ -51,24 +59,34 @@ export default {
 </script>
 
 <style scoped>
-.nasa-pic {
+.nasa-image-of-the-month {
   height: 350px;
   width: 350px;
+}
+.header {
+  font-size: 32px;
+  margin-top: 80px;
 }
 
 .choose-date {
   background-color: white;
-  width: 80px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 90px;
   height: 30px;
   display: flex;
-  justify-content: center;
+  padding-left: 15px;
+  text-align: center;
 }
 option {
   color: black;
+  margin: 6px;
+  font-size: 18px;
 }
 
 .flex {
   display: flex;
   justify-content: center;
+  margin-top: 80px;
 }
 </style>

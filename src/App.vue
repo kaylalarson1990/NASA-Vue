@@ -54,7 +54,7 @@ p {
   justify-content: space-evenly;
   a {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 24px;
     color: $dark-blue;
     &.router-link-exact-active {
       color: $middle-blue;

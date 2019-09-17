@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h3 class="header">Here you can find images based on a specific date.</h3>
     <div class="flex">
-      <option disabled value>Please select a date:</option>
+      <option disabled value>Please select a date to begin:</option>
       <form class="choose-date">
         <select @change="dateSelection($event)">
-          <option v-for="(date, index) in dates" v-bind:value="date" :key="index">{{ date }}</option>
+          <option v-for="(date, index) in dates" :value="date" :key="index">{{ date }}</option>
         </select>
+        <img class="down-arrow" src="@/assets/down-arrow.png" />
       </form>
     </div>
     <div class="day" v-if="this.monthlyImage.date">
@@ -27,16 +27,13 @@
 import { getImageOfTheMonth } from "../apiCalls";
 export default {
   name: "ImageOfTheMonth",
-  props: {
-    msg: Object
-  },
   data() {
     let date = new Date().toISOString().slice(0, 10);
-    console.log('date', date)
+    console.log("date", date);
     let month = date.slice(0, 8);
-    console.log('month', month)
+    console.log("month", month);
     let day = date.slice(8, 10);
-    console.log('day', day)
+    console.log("day", day);
     let text = "";
     let index;
     for (index = 1; index < day; index++) {
@@ -59,9 +56,15 @@ export default {
 </script>
 
 <style scoped>
+.down-arrow {
+  width: 15px;
+  height: 15px;
+  margin-top: 8px;
+}
 .nasa-image-of-the-month {
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  width: 1000px;
+  box-shadow: 0 0 15px gray;
 }
 .header {
   font-size: 32px;
@@ -72,15 +75,15 @@ export default {
   background-color: white;
   border: 1px solid black;
   border-radius: 8px;
-  width: 90px;
+  width: 100px;
   height: 30px;
   display: flex;
-  padding-left: 15px;
+  padding: 8px;
   text-align: center;
 }
 option {
   color: black;
-  margin: 6px;
+  margin: 10px;
   font-size: 18px;
 }
 

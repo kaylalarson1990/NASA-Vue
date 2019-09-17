@@ -38,7 +38,12 @@ h1 {
 }
 
 p {
-  @include large-text-bold($light-blue);
+  @include large-text-bold($black);
+  font-size: 18px;
+  margin: 40px 70px;
+  text-align: left;
+  font-family: 'Open Sans';
+  font-weight: 500;
 }
 
 #app {
@@ -53,11 +58,12 @@ p {
   display: flex;
   justify-content: space-evenly;
   a {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 24px;
-    color: $dark-blue;
+    letter-spacing: .05em;
+    color: $blue;
     &.router-link-exact-active {
-      color: $middle-blue;
+      color: $red;
     }
   }
   a:link {

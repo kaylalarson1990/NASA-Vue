@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <h2>Welcome to NASA images</h2>
+    <img class="nasa-logo" src="@/assets/nasa-logo.png" />
     <h4>
       Click one of the links above to begin
       <img class="arrow" src="@/assets/arrow.png" />
@@ -14,18 +14,27 @@
 @import "@/global-styles/typography.scss";
 
 h2 {
-  color: $light-blue;
+  color: $dark-gray;
   margin-top: 80px;
-  font-size: 48px;
+  font-size: 42px;
+  font-weight: 500;
   text-align: center;
+  font-family: "Open Sans";
 }
 h4 {
   color: black;
   font-size: 32px;
-  margin-bottom: 280px;
+  font-weight: 300;
 }
+
 .arrow {
   width: 50px;
   height: 50px;
+}
+
+.nasa-logo {
+  width: 800px;
+  height: 400px;
+  margin-top: 20px;
 }
 </style>

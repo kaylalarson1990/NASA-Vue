@@ -10,8 +10,9 @@
 @import "@/global-styles/typography.scss";
 
 h2 {
-  color: white;
-  margin-top: 100px;
+  color: $light-blue;
+  margin-top: 80px;
+  font-size: 48px;
   text-align: center;
 }
 </style>

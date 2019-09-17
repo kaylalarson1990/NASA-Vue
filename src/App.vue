@@ -1,23 +1,25 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <ImageOfTheDay /> -->
       <router-link to="/">Home</router-link>
       <router-link to="/pictureOfTheDay">Image of the Day</router-link>
       <router-link to="/pictureOfTheMonth">Image of the Month</router-link>
     </div>
-      <router-view />
+    <router-view />
   </div>
 </template>
 
 <script>
 import Home from "./Home.vue";
 import ImageOfTheDay from "./components/ImageOfTheDay";
+import ImageOfTheMonth from "./components/ImageOfTheMonth";
+
 export default {
   name: "app",
   components: {
     Home,
-    ImageOfTheDay
+    ImageOfTheDay,
+    ImageOfTheMonth
   }
 };
 </script>
@@ -28,7 +30,7 @@ export default {
 @import "@/global-styles/typography.scss";
 
 body {
-  background: $light-blue;
+  background: $white;
 }
 
 h1 {
@@ -36,7 +38,7 @@ h1 {
 }
 
 p {
-  @include large-text-bold($white);
+  @include large-text-bold($light-blue);
 }
 
 #app {
@@ -44,7 +46,7 @@ p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $white;
+  color: $light-blue;
 }
 #nav {
   padding: 30px;

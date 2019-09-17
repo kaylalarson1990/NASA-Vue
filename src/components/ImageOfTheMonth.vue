@@ -6,7 +6,6 @@
         <select @change="dateSelection($event)">
           <option v-for="(date, index) in dates" :value="date" :key="index">{{ date }}</option>
         </select>
-        <img class="down-arrow" src="@/assets/down-arrow.png" />
       </form>
     </div>
     <div class="day" v-if="this.monthlyImage.date">
@@ -56,11 +55,6 @@ export default {
 </script>
 
 <style scoped>
-.down-arrow {
-  width: 15px;
-  height: 15px;
-  margin-top: 8px;
-}
 .nasa-image-of-the-month {
   height: 400px;
   width: 1000px;
@@ -72,14 +66,10 @@ export default {
 }
 
 .choose-date {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 8px;
   width: 100px;
   height: 30px;
   display: flex;
   padding: 8px;
-  text-align: center;
 }
 option {
   color: black;

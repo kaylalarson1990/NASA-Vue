@@ -1,4 +1,4 @@
-import { apiKey } from "@/apiKey.js";
+import { apiKey } from "./apiKey.js";
 
 export const getImageOfTheDay = async () => {
   const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;

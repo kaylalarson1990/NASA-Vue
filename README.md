@@ -21,14 +21,18 @@ To learn a new language (Vue) in a short amount of time to complete a code chall
 
 ## Screenshots
 
+
 ### Homepage:
-<img width="1649" alt="Screen Shot 2019-09-17 at 8 31 58 PM" src="https://user-images.githubusercontent.com/37026730/65103104-6bdef980-d98a-11e9-8bc5-01d2969bc231.png">
+![Screen Shot 2019-09-18 at 10 57 27 AM](https://user-images.githubusercontent.com/37026730/65169203-50fc9b80-da03-11e9-90e3-18d78c4403bc.png)
 
 ### View NASA image for current date:
-<img width="1649" alt="Screen Shot 2019-09-17 at 8 32 10 PM" src="https://user-images.githubusercontent.com/37026730/65103105-6bdef980-d98a-11e9-8736-f8f72bfef175.png">
+![Screen Shot 2019-09-18 at 10 57 39 AM](https://user-images.githubusercontent.com/37026730/65169211-535ef580-da03-11e9-8e32-cdba07502ed0.png)
+
+### See details when button clicked:
+![Screen Shot 2019-09-18 at 10 57 50 AM](https://user-images.githubusercontent.com/37026730/65169215-56f27c80-da03-11e9-9ad2-8d8ffa339a72.png)
 
 ### Select a date to view NASA image:
-<img width="1657" alt="Screen Shot 2019-09-17 at 8 32 19 PM" src="https://user-images.githubusercontent.com/37026730/65103106-6bdef980-d98a-11e9-906f-77edbf91fa1f.png">
+![Screen Shot 2019-09-18 at 10 58 03 AM](https://user-images.githubusercontent.com/37026730/65169223-5a860380-da03-11e9-84b9-a0c22956cd60.png)
 
 ### What shows up after you pick a date to view NASA image:
-<img width="1650" alt="Screen Shot 2019-09-17 at 8 32 39 PM" src="https://user-images.githubusercontent.com/37026730/65103107-6bdef980-d98a-11e9-82a8-9087484b83ca.png">
+![Screen Shot 2019-09-18 at 10 58 12 AM](https://user-images.githubusercontent.com/37026730/65169230-5ce85d80-da03-11e9-8fe0-12422e425692.png)

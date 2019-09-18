@@ -28,8 +28,9 @@ export default {
 </script>
 <style lang="scss">
 .nasa-image-of-the-day {
-  height: 400px;
-  width: 1000px;
+  height: 500px;
+  width: 500px;
   box-shadow: 0 0 15px gray;
+  border-radius: 500px;
 }
 </style>

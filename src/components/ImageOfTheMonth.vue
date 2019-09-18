@@ -51,9 +51,10 @@ export default {
 
 <style lang="scss">
 .nasa-image-of-the-month {
-  height: 400px;
-  width: 1000px;
+  height: 500px;
+  width: 500px;
   box-shadow: 0 0 15px gray;
+  border-radius: 500px;
 }
 .header {
   font-size: 32px;

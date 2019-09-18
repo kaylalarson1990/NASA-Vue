@@ -40,7 +40,7 @@ h1 {
 p {
   @include large-text-bold($black);
   font-size: 18px;
-  margin: 40px 70px;
+  margin: 40px 100px;
   text-align: left;
   font-family: "Open Sans";
   font-weight: 500;

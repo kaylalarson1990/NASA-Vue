@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex">
-      <option disabled value>Please select a date to begin:</option>
+      <option>Please select a date to begin:</option>
       <form class="choose-date">
         <select @change="dateSelection($event)">
           <option v-for="(date, index) in dates" :value="date" :key="index">{{ date }}</option>
@@ -13,12 +13,11 @@
       <h3>{{this.monthlyImage.date}}</h3>
       <img
         class="nasa-image-of-the-month"
-        v-bind:src="`${this.monthlyImage.hdurl}`"
+        :src="`${this.monthlyImage.hdurl}`"
         alt="nasa-image-of-the-day"
       />
       <p>{{this.monthlyImage.explanation}}</p>
     </div>
-    <div v-else></div>
   </div>
 </template>
 
@@ -28,17 +27,14 @@ export default {
   name: "ImageOfTheMonth",
   data() {
     let date = new Date().toISOString().slice(0, 10);
-    console.log("date", date);
     let month = date.slice(0, 8);
-    console.log("month", month);
     let day = date.slice(8, 10);
-    console.log("day", day);
-    let text = "";
+    let description = "";
     let index;
     for (index = 1; index < day; index++) {
-      text += `${month}${index},`;
+      description += `${month}${index},`;
     }
-    let returnAllDates = text.split(",");
+    let returnAllDates = description.split(",");
     return {
       dates: returnAllDates,
       monthlyImage: {}
@@ -47,8 +43,8 @@ export default {
   methods: {
     async dateSelection($event) {
       let choosenDate = $event.target.value;
-      let picture = await getImageOfTheMonth(choosenDate);
-      this.monthlyImage = picture;
+      let image = await getImageOfTheMonth(choosenDate);
+      this.monthlyImage = image;
     }
   }
 };

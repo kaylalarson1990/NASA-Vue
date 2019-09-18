@@ -42,7 +42,7 @@ p {
   font-size: 18px;
   margin: 40px 70px;
   text-align: left;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: 500;
 }
 
@@ -60,7 +60,7 @@ p {
   a {
     font-weight: 500;
     font-size: 24px;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     color: $blue;
     &.router-link-exact-active {
       color: $red;

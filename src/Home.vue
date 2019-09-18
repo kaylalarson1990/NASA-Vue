@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <img class="nasa-logo" src="@/assets/nasa-logo.png" />
+    <img class="nasa-logo" src="@/assets/nasa-selfie.png" />
     <h4>
       Click one of the links above to begin
       <img class="arrow" src="@/assets/arrow.png" />
@@ -33,8 +33,9 @@ h4 {
 }
 
 .nasa-logo {
-  width: 800px;
+  width: 400px;
   height: 400px;
   margin-top: 20px;
+  border-radius: 500px;
 }
 </style>

@@ -13,8 +13,8 @@
       <h3>{{this.monthlyImage.date}}</h3>
       <img
         class="nasa-image-of-the-month"
-        :src="`${this.monthlyImage.hdurl}`" 
-        alt="nasa-image-of-the-day"
+        :src="`${this.monthlyImage.hdurl}`"
+        alt="nasa image pulled for specific day in a whole month"
       />
       <p>{{this.monthlyImage.explanation}}</p>
     </div>

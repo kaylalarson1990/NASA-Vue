@@ -1,7 +1,7 @@
-import { apiKey } from "./apiKey.js";
+const API_KEY = process.env.VUE_APP_API_KEY;
 
 export const getImageOfTheDay = async () => {
-  const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
   return fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -14,7 +14,7 @@ export const getImageOfTheDay = async () => {
 };
 
 export const getImageOfTheMonth = async month => {
-  const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${month}`;
+  const url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${month}`;
   return fetch(url)
     .then(response => {
       if (!response.ok) {

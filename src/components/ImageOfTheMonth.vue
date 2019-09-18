@@ -16,7 +16,10 @@
         :src="`${this.monthlyImage.hdurl}`"
         alt="nasa image pulled for specific day in a whole month"
       />
-      <p>{{this.monthlyImage.explanation}}</p>
+      <div>
+        <button class="show-more" v-on:click="toggle = !toggle">Show Details</button>
+        <p v-if="toggle">{{this.monthlyImage.explanation}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -36,7 +39,8 @@ export default {
     let returnAllDates = description.split(",");
     return {
       dates: returnAllDates,
-      monthlyImage: {}
+      monthlyImage: {},
+      toggle: false
     };
   },
   methods: {
@@ -50,6 +54,9 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/global-styles/colors.scss";
+@import "@/global-styles/typography.scss";
+
 .nasa-image-of-the-month {
   height: 500px;
   width: 500px;
@@ -77,5 +84,14 @@ export default {
   display: flex;
   justify-content: center;
   margin-top: 80px;
+}
+
+.show-more {
+  margin-top: 20px;
+  background-color: $blue;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
 }
 </style>

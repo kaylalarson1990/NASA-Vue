@@ -14,20 +14,14 @@ export default new Router({
       component: Home
     },
     {
-      path: "/pictureOfTheDay",
+      path: "/imageOfTheDay",
       name: "Image of the Day",
-      component: () =>
-        /* webpackChunkName: "Image of the Day"" */ import(
-          "./components/ImageOfTheDay.vue"
-        )
+      component: () => import("./components/ImageOfTheDay.vue")
     },
     {
-      path: "/pictureOfTheMonth",
+      path: "/imageOfTheMonth",
       name: "Image of the Month",
-      component: () =>
-        /* webpackChunkName: "Image of the Month"" */ import(
-          "./components/ImageOfTheMonth.vue"
-        )
+      component: () => import("./components/ImageOfTheMonth.vue")
     }
   ]
 });

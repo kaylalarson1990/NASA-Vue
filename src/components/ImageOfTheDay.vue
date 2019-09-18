@@ -4,7 +4,7 @@
     <h3>{{this.imageOfTheDay.date}}</h3>
     <img
       class="nasa-image-of-the-day"
-      v-bind:src="`${this.imageOfTheDay.hdurl}`"
+      :src="`${this.imageOfTheDay.hdurl}`"
       alt="nasa image pulled for specific date"
     />
     <p>{{this.imageOfTheDay.explanation}}</p>
@@ -26,7 +26,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="scss">
 .nasa-image-of-the-day {
   height: 400px;
   width: 1000px;

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex">
-      <option>Please select a date to begin:</option>
+      <div class="text">Please select a date to begin:</div>
       <form class="choose-date">
         <select @change="dateSelection($event)">
           <option v-for="(date, index) in dates" :value="date" :key="index">{{ date }}</option>
@@ -13,7 +13,7 @@
       <h3>{{this.monthlyImage.date}}</h3>
       <img
         class="nasa-image-of-the-month"
-        :src="`${this.monthlyImage.hdurl}`"
+        :src="`${this.monthlyImage.hdurl}`" 
         alt="nasa-image-of-the-day"
       />
       <p>{{this.monthlyImage.explanation}}</p>
@@ -30,8 +30,7 @@ export default {
     let month = date.slice(0, 8);
     let day = date.slice(8, 10);
     let description = "";
-    let index;
-    for (index = 1; index < day; index++) {
+    for (let index = 1; index < day; index++) {
       description += `${month}${index},`;
     }
     let returnAllDates = description.split(",");
@@ -50,7 +49,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 .nasa-image-of-the-month {
   height: 400px;
   width: 1000px;
@@ -67,9 +66,9 @@ export default {
   display: flex;
   padding: 8px;
 }
-option {
+.text {
   color: black;
-  margin: 10px;
+  margin: 9px;
   font-size: 18px;
 }
 

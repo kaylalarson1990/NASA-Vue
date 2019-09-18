@@ -2,8 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link>
-      <router-link to="/pictureOfTheDay">Image of the Day</router-link>
-      <router-link to="/pictureOfTheMonth">Image of the Month</router-link>
+      <router-link to="/imageOfTheDay">Image of the Day</router-link>
+      <router-link to="/imageOfTheMonth">Image of the Month</router-link>
     </div>
     <router-view />
   </div>
@@ -56,7 +56,9 @@ p {
 #nav {
   padding: 30px;
   display: flex;
+  margin: 0;
   justify-content: space-evenly;
+  box-shadow: 0 3px 2px -2px gray;
   a {
     font-weight: 500;
     font-size: 24px;

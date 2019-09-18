@@ -1,6 +1,6 @@
 # NASA-Vue
 
-[Deployed Link on Heroku](https://nasa-image-otd.herokuapp.com/)
+[Deployed Link](https://nasa-image-otd.herokuapp.com/)
 
 ## Description
 
@@ -18,6 +18,10 @@ To learn a new language (Vue) in a short amount of time to complete a code chall
 ## Technology Used
 
 - Vue
+- Vue Router
+- API Fetch
+- SASS
+- HTML
 
 ## Screenshots
 

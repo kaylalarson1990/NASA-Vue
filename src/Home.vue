@@ -33,9 +33,9 @@ h4 {
 }
 
 .nasa-logo {
-  width: 400px;
-  height: 400px;
-  margin-top: 20px;
+  width: 450px;
+  height: 450px;
+  margin-top: 50px;
   border-radius: 500px;
 }
 </style>

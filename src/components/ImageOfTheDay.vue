@@ -7,7 +7,10 @@
       :src="`${this.imageOfTheDay.hdurl}`"
       alt="nasa image pulled for specific date"
     />
-    <p>{{this.imageOfTheDay.explanation}}</p>
+    <div>
+      <button class="show-more" v-on:click="toggle = !toggle">Show Details</button>
+      <p v-if="toggle">{{this.imageOfTheDay.explanation}}</p>
+    </div>
   </div>
 </template>
 
@@ -17,7 +20,8 @@ export default {
   name: "ImageOfTheDay",
   data() {
     return {
-      imageOfTheDay: {}
+      imageOfTheDay: {},
+      toggle: false
     };
   },
   async created() {
@@ -27,10 +31,22 @@ export default {
 };
 </script>
 <style lang="scss">
+@import "@/global-styles/colors.scss";
+@import "@/global-styles/typography.scss";
+
 .nasa-image-of-the-day {
   height: 500px;
   width: 500px;
   box-shadow: 0 0 15px gray;
   border-radius: 500px;
+}
+
+.show-more {
+  margin-top: 20px;
+  background-color: $blue;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
 }
 </style>
